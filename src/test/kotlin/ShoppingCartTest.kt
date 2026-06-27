@@ -43,4 +43,15 @@ class ShoppingCartTest {
         assertEquals(2, shoppingCart.getItemAmount("Apple"))
         assertEquals(3, shoppingCart.getTotalItems().size)
     }
+
+    @Test
+    fun test_remove_item() {
+        shoppingCart.addItem("Apple")
+        shoppingCart.addItem("Apple")
+        shoppingCart.addItem("Orange")
+        shoppingCart.removeItem("Apple")
+
+        assertEquals(1, shoppingCart.getItemAmount("Apple"))
+        assertEquals(2, shoppingCart.getTotalItems().size)
+    }
 }
