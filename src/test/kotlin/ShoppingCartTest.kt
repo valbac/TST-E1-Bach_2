@@ -35,11 +35,12 @@ class ShoppingCartTest {
     }
 
     @Test
-    fun test_add_multiple_items_sums_total(){
+    fun test_get_quantity_of_item(){
         shoppingCart.addItem("Apple")
         shoppingCart.addItem("Apple")
+        shoppingCart.addItem("Orange")
 
         assertEquals(2, shoppingCart.getItemAmount("Apple"))
-        assertEquals(2, shoppingCart.getTotalItems().size)
+        assertEquals(3, shoppingCart.getTotalItems().size)
     }
 }
