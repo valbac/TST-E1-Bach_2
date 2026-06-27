@@ -19,18 +19,18 @@ class ShoppingCartTest {
 
     @Test
     fun test_add_item_increases_total(){
-        val firstItem = shoppingCart.addItem("test")
+        shoppingCart.addItem("test")
 
         assertEquals(1, shoppingCart.getTotalItems().size)
     }
 
     @Test
     fun test_add_multiple_items_sums_total(){
-        val firstItem = shoppingCart.addItem("test1")
-        val secondItem = shoppingCart.addItem("test2")
-        val thirdItem = shoppingCart.addItem("test3")
+        shoppingCart.addItem("test1")
+        shoppingCart.addItem("test2")
+        shoppingCart.addItem("test3")
 
-        assertEquals("test1 test2 test3", shoppingCart.printItems)
+        assertEquals("test1 test2 test3", shoppingCart.getItemNames())
         assertEquals(3, shoppingCart.getTotalItems().size)
     }
 }

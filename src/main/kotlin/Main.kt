@@ -4,6 +4,9 @@ package org.example
 fun main() {
     val shoppingCart = ShoppingCart()
 
-    shoppingCart.addItem("test")
+    shoppingCart.addItem("test1")
+    shoppingCart.addItem("test2")
+    shoppingCart.addItem("test3")
     println(shoppingCart.getTotalItems().size)
+    println(shoppingCart.getItemNames())
 }

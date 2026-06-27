@@ -16,4 +16,8 @@ class ShoppingCart {
         items.add(newItem)
         return newItem
     }
+
+    fun getItemNames(): String {
+        return items.joinToString(separator = " ") { it.name }
+    }
 }
