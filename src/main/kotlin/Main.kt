@@ -7,6 +7,7 @@ fun main() {
     shoppingCart.addItem("Apple")
     shoppingCart.addItem("Apple")
     shoppingCart.addItem("Orange")
+    shoppingCart.removeItem("Apple")
     println(shoppingCart.getTotalItems().size)
     println(shoppingCart.getItemNames())
     println(shoppingCart.getItemAmount("Apple"))

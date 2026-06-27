@@ -27,4 +27,11 @@ class ShoppingCart {
         }
         return items.count { it.name == name }
     }
+
+    fun removeItem(name: String) {
+        if (name.isBlank()) {
+            throw IllegalArgumentException("Task description cannot be empty")
+        }
+        items.remove(Item(name))
+    }
 }
