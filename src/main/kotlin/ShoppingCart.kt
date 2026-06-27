@@ -7,4 +7,13 @@ class ShoppingCart {
     private val items = mutableListOf<Item>()
 
     fun getTotalItems(): List<Item> = items.toList()
+
+    fun addItem(name: String): Item {
+        if (name.isBlank()) {
+            throw IllegalArgumentException("Task description cannot be empty")
+        }
+        val newItem = Item(name = name.trim())
+        items.add(newItem)
+        return newItem
+    }
 }
